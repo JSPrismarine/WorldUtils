@@ -1,0 +1,15 @@
+{
+  "name": "ChunkUtils",
+  "collaborators": [
+    "Olybear9 <olybear9@gmail.com>"
+  ],
+  "version": "0.1.0",
+  "files": [
+    "ChunkUtils_bg.wasm",
+    "ChunkUtils.js",
+    "ChunkUtils.d.ts"
+  ],
+  "module": "ChunkUtils.js",
+  "types": "ChunkUtils.d.ts",
+  "sideEffects": false
+}
