@@ -1,0 +1,4 @@
+{
+  "extends": ["@bigmichi1"],
+  "ignoreDeps": ["@jsprismarine/bedrock-data"]
+}
