@@ -24,6 +24,28 @@ pub fn gen_flat_chunk() -> Array {
     return chunk_dict;
 }
 
+/**
+ * Returns a map of positions in the level.
+ * We iterate through this
+ */
+#[wasm_bindgen]
+pub fn gen_flat_chunk_bench(times: u32) -> Array {
+    let chunk_dict = Array::new();
+
+    for t in 0..times {
+        for x in 0..16 {
+            for z in 0..16 {
+                chunk_dict.set(chunk_dict.length(), add_block(x, 0, z, "minecraft:bedrock"));
+                chunk_dict.set(chunk_dict.length(), add_block(x, 1, z, "minecraft:dirt"));
+                chunk_dict.set(chunk_dict.length(), add_block(x, 2, z, "minecraft:dirt"));
+                chunk_dict.set(chunk_dict.length(), add_block(x, 3, z, "minecraft:dirt"));
+                chunk_dict.set(chunk_dict.length(), add_block(x, 4, z, "minecraft:grass"));
+            }
+        }
+    }
+    return chunk_dict;
+}
+
 #[derive(Serialize, Deserialize)]
 pub struct ChunkBlockData {
     x: u32,
